@@ -7,7 +7,12 @@ export default [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "connect-src": ["'self'", "https:"],
+          "connect-src": [
+            "'self'",
+            "https:",
+            "https://palmas-canarias.vercel.app",
+            "https://palmas-production.up.railway.app",
+          ],
           "img-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
           "media-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
           upgradeInsecureRequests: null,
@@ -20,7 +25,11 @@ export default [
     config: {
       enabled: true,
       headers: ["*"],
-      origin: ["http://localhost:3000"],
+      origin: [
+        "http://localhost:3000",
+        "https://palmas-canarias.vercel.app",
+        "https://palmas-production.up.railway.app",
+      ],
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
       keepHeaderOnError: true,
       credentials: true,
