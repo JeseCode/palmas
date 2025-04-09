@@ -1,0 +1,40 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.vscode/
+
+# Strapi build y caché
+.cache/
+build/
+
+# Archivos de configuración del entorno
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+debug.log
+strapi-output.log
+strapi-error.log
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+.docker/
+
+# Archivos de subida de Strapi (opcional, si usas almacenamiento en la nube)
+public/uploads/
+
+# Git y configuración del editor
+.idea/
+*.swp
+*.swo
+.editorconfig

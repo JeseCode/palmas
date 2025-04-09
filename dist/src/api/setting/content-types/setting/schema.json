@@ -1,0 +1,47 @@
+{
+    "kind": "singleType",
+    "collectionName": "settings",
+    "info": {
+        "singularName": "setting",
+        "pluralName": "settings",
+        "displayName": "Settings",
+        "description": "Configuraciones del sistema"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "attributes": {
+        "reservationStartTime": {
+            "type": "time",
+            "required": true,
+            "default": "08:00"
+        },
+        "reservationEndTime": {
+            "type": "time",
+            "required": true,
+            "default": "22:00"
+        },
+        "maxReservationsPerUser": {
+            "type": "integer",
+            "required": true,
+            "default": 2,
+            "min": 1
+        },
+        "maxAttendeesPerReservation": {
+            "type": "integer",
+            "required": true,
+            "default": 20,
+            "min": 1
+        },
+        "requireApproval": {
+            "type": "boolean",
+            "required": true,
+            "default": true
+        },
+        "notifyAdmins": {
+            "type": "boolean",
+            "required": true,
+            "default": true
+        }
+    }
+}

@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservations",
+  "info": {
+    "singularName": "reservation",
+    "pluralName": "reservations",
+    "displayName": "Reservation",
+    "description": "Reservaciones de áreas sociales"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "startTime": {
+      "type": "time",
+      "required": true
+    },
+    "endTime": {
+      "type": "time",
+      "required": true
+    },
+    "socialArea": {
+      "type": "enumeration",
+      "enum": [
+        "communalHall",
+        "pool",
+        "bbq",
+        "terrace"
+      ],
+      "required": true
+    },
+    "eventType": {
+      "type": "string",
+      "required": true
+    },
+    "attendees": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "max": 100
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending",
+      "required": true
+    },
+    "rejectionReason": {
+      "type": "text"
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "reservations"
+    }
+  }
+}

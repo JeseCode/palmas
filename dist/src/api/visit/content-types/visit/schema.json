@@ -1,0 +1,53 @@
+{
+    "kind": "collectionType",
+    "collectionName": "visits",
+    "info": {
+        "singularName": "visit",
+        "pluralName": "visits",
+        "displayName": "Visit",
+        "description": "Registro de visitas al condominio"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "entry_date": {
+            "type": "datetime",
+            "required": true
+        },
+        "exit_date": {
+            "type": "datetime"
+        },
+        "status": {
+            "type": "enumeration",
+            "enum": [
+                "active",
+                "finished"
+            ],
+            "default": "active",
+            "required": true
+        },
+        "visiting_place": {
+            "type": "string",
+            "required": true
+        },
+        "visitors": {
+            "type": "component",
+            "repeatable": true,
+            "component": "visit.visitor",
+            "required": true,
+            "min": 1
+        },
+        "vehicle": {
+            "type": "component",
+            "component": "visit.vehicle"
+        },
+        "user": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "plugin::users-permissions.user",
+            "inversedBy": "visits"
+        }
+    }
+}

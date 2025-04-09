@@ -1,0 +1,109 @@
+{
+    "kind": "collectionType",
+    "collectionName": "businesses",
+    "info": {
+        "singularName": "business",
+        "pluralName": "businesses",
+        "displayName": "Business",
+        "description": "Emprendimientos y negocios de los residentes"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "businessUser": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "plugin::users-permissions.user"
+        },
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "category": {
+            "type": "enumeration",
+            "enum": [
+                "FOOD",
+                "SERVICES",
+                "RETAIL",
+                "HEALTH",
+                "EDUCATION",
+                "TECHNOLOGY",
+                "OTHER"
+            ],
+            "required": true
+        },
+        "description": {
+            "type": "text",
+            "required": true
+        },
+        "phone": {
+            "type": "string",
+            "required": true
+        },
+        "email": {
+            "type": "email"
+        },
+        "address": {
+            "type": "string",
+            "required": true
+        },
+        "schedule": {
+            "type": "string"
+        },
+        "logo": {
+            "type": "media",
+            "multiple": false,
+            "required": true,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "photoOne": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "photoTwo": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "photoThree": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "photoFour": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "website": {
+            "type": "string"
+        },
+        "facebook": {
+            "type": "string"
+        },
+        "instagram": {
+            "type": "string"
+        },
+        "featured": {
+            "type": "boolean",
+            "default": false
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "collectionName": "components_visit_visitors",
+    "info": {
+        "displayName": "Visitor",
+        "description": "Información del visitante"
+    },
+    "options": {},
+    "attributes": {
+        "first_name": {
+            "type": "string",
+            "required": true
+        },
+        "last_name": {
+            "type": "string",
+            "required": true
+        },
+        "document_number": {
+            "type": "string",
+            "required": true
+        },
+        "photo": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images"
+            ]
+        }
+    }
+}

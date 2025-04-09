@@ -1,0 +1,71 @@
+{
+    "kind": "collectionType",
+    "collectionName": "rentals",
+    "info": {
+        "singularName": "rental",
+        "pluralName": "rentals",
+        "displayName": "Rental",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "rentalsUser": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "plugin::users-permissions.user",
+            "inversedBy": "rentals"
+        },
+        "amount": {
+            "required": true,
+            "type": "integer"
+        },
+        "imgOne": {
+            "type": "media",
+            "multiple": false,
+            "required": true,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "imgTwo": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "imgThree": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "imgFour": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "rentOrSale": {
+            "type": "enumeration",
+            "enum": [
+                "RENT",
+                "SALE"
+            ],
+            "required": true,
+            "default": "RENT"
+        },
+        "description": {
+            "type": "text",
+            "required": true
+        }
+    }
+}

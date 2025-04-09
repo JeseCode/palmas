@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "survey_responses",
+  "info": {
+    "singularName": "survey-response",
+    "pluralName": "survey-responses",
+    "displayName": "Survey Response",
+    "description": "Responses to surveys"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "response": {
+      "type": "json",
+      "required": true
+    },
+    "survey": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::survey.survey",
+      "inversedBy": "responses"
+    },
+    "respondent": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "coefficient": {
+      "type": "decimal",
+      "required": false
+    }
+  }
+}

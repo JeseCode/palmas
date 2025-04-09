@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blocks",
+  "info": {
+    "singularName": "block",
+    "pluralName": "blocks",
+    "displayName": "Block",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "block": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "coefficient": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dependents",
+  "info": {
+    "singularName": "dependent",
+    "pluralName": "dependents",
+    "displayName": "Dependent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "FEMALE",
+        "MALE"
+      ]
+    },
+    "kinship": {
+      "type": "enumeration",
+      "enum": [
+        "MOTHER",
+        "FATHER",
+        "GRANDMOTHER",
+        "GRANDFATHER",
+        "WIFE",
+        "HUSBAND",
+        "SON",
+        "DAUGHTER",
+        "BROTHER",
+        "SISTER",
+        "UNCLE",
+        "AUNT",
+        "COUSIN",
+        "NEPHEW",
+        "NIECE"
+      ]
+    },
+    "birthday": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "dependents"
+    },
+    "imgUrl": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

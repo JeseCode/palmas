@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_visit_vehicles",
+  "info": {
+    "displayName": "Vehicle",
+    "description": "Información del vehículo del visitante"
+  },
+  "options": {},
+  "attributes": {
+    "license_plate": {
+      "type": "string",
+      "required": true
+    },
+    "brand": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "palmas-condomio",
+  "version": "1.5.0",
+  "private": true,
+  "description": "A Strapi application",
+  "scripts": {
+    "build": "strapi build",
+    "deploy": "strapi deploy",
+    "develop": "strapi develop",
+    "seed:example": "node ./scripts/seed.js",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "5.0.0",
+    "@strapi/plugin-documentation": "^5.0.0",
+    "@strapi/plugin-users-permissions": "5.0.0",
+    "@strapi/provider-email-sendgrid": "^5.0.0",
+    "@strapi/provider-upload-cloudinary": "^5.0.0",
+    "@strapi/strapi": "5.0.0",
+    "dotenv": "^16.4.7",
+    "fs-extra": "^10.0.0",
+    "mime-types": "^2.1.27",
+    "mysql2": "3.9.4",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "24ad6298-ad42-450b-8a27-32bef0ce3590"
+  }
+}
