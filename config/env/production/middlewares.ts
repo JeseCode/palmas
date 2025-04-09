@@ -10,7 +10,7 @@ export default [
           "connect-src": [
             "'self'",
             "https:",
-            "wss:", // ← Esto permite conexiones WebSocket seguras (wss://)
+            "wss:",
             "https://palmas-canarias.vercel.app",
             "https://palmas-production.up.railway.app",
           ],
